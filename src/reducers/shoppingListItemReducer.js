@@ -4,8 +4,10 @@ export default function shoppingListItemReducer(
 	},
 	action
 ) {
+	console.log(action);
 	switch (action.type) {
 		case 'INCREASE_COUNT':
+			console.log('Current state.items length %s', state.items.length);
 			return {
 				...state,
 				items: state.items.concat(state.items.length + 1)
